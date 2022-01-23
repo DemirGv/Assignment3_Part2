@@ -8,7 +8,7 @@ public class TodoItemTask {
     private TodoItem todoItem;
     private Person assignee;
 
-//Constructor
+//Constructors
     public TodoItemTask(int id, boolean assigned, TodoItem todoItem, Person assignee) {
         this.id = 0;
         this.assigned = assigned;
@@ -21,7 +21,6 @@ public class TodoItemTask {
     }
 
 //    Methods
-//getSummary() should return a description of the object. Like {id: 4, name: Nisse Olsson, email: nisse@gmail.com}
     public String getSummary(){
         return "id: " + id + "assigned: " + assigned + "todoItem: " + todoItem + "assignee: " + assignee;
 }

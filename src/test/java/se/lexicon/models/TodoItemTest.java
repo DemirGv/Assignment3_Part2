@@ -12,7 +12,7 @@ public class TodoItemTest {
     @Test
     public void test_create_TodoItem_successfully() {
         TodoItem testObject = new TodoItem(
-                0,
+                3,
                 "tests",
                 "testing",
                 LocalDate.parse("2022-01-31"),
@@ -20,7 +20,7 @@ public class TodoItemTest {
                 null
         );
 
-        assertEquals(0,testObject.getId());
+        assertEquals(3,testObject.getId());
         assertEquals("tests", testObject.getTitle());
         assertEquals("testing",testObject.getTaskDescription());
         assertEquals(LocalDate.parse("2022-01-31"),testObject.getDeadLine());

@@ -1,15 +1,17 @@
 package se.lexicon.models;
 
-
-public class Person {
+public abstract class Person extends Object {
 
 //    Fields
     private int id;
     private String firstName;
     private String lastName;
     private String email;
+    private AppUser credentials;
 
-//    Constructor
+    public abstract String getTaskDescription();
+
+//    Constructors
     public Person(int id, String firstName, String lastName, String email) {
         this.id = 0;
         this.firstName = firstName;
@@ -24,11 +26,6 @@ public class Person {
     }
 
     //    Methods
-//getSummary() should return a description of the object. Like {id: 4, name: Nisse Olsson, email: nisse@gmail.com}
-    public String getSummary(){
-        return "id: " + id + "name: " + firstName + " " + lastName + "email: " + email;
-    }
-
     public int getId() {
         return id;
     }
@@ -55,5 +52,18 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + id + "name: " + firstName + " " + lastName + "email: " + email +"}";
+    }
+
+    public AppUser getCredentials() {
+        return credentials;
+    }
+
+    public void setCredentials(AppUser credentials) {
+        this.credentials = credentials;
     }
 }

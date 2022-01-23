@@ -3,7 +3,7 @@ package se.lexicon.models;
 import java.time.LocalDate;
 
 
-public class TodoItem {
+public class TodoItem extends Person {
 
 //    Fields
     private int id;
@@ -14,10 +14,9 @@ public class TodoItem {
     private Person creator;
     private LocalDate overdue;
 
-    //    Constructor
+    //    Constructors
     public TodoItem(int id, String title, String taskDescription, LocalDate deadLine, boolean done, Person creator) {
-        // Operator '==' cannot be applied to 'int', 'null'
-        this.id = 0;
+        this.id = 3;
         this.title = title;
         if(title == null) throw new RuntimeException("title was null");
         this.taskDescription = taskDescription;
@@ -31,7 +30,6 @@ public class TodoItem {
     }
 
 //    Methods
-//getSummary() should return a description of the object. Like {id: 4, name: Nisse Olsson, email: nisse@gmail.com}
 public String getSummary(){
     return "id: " + id + "title: " + title + "taskDescription: " + taskDescription + "deadLine: " + deadLine
             + "done: " + done + "creator: " + creator;
